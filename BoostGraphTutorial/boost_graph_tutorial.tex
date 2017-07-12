@@ -755,7 +755,7 @@ First, two vertices are created, using the function 'boost::add\_vertex'.
 'vd'\index{vd}), both of which are stored. The vertex descriptors
 are used to add an edge to the graph, using 'boost::add\_edge'\index{boost::add_edge@boost::add\_edge}.
 'boost::add\_edge'\index{boost::add_edge@boost::add\_edge} returns
-returns a std::pair\index{std::pair}, consisting of an edge descriptor
+a std::pair\index{std::pair}, consisting of an edge descriptor
 and a boolean success indicator. The success of adding the edge is
 checked by an assert statement. Here we assert\index{assert} that
 this insertion was successfull. Insertion can fail if an edge is already
@@ -1072,7 +1072,7 @@ to .svg using algorithm \ref{alg:convert_dot_to_svg}\label{fig:create_k2_graph.s
 \end{figure}
 
 
-Also this figure shows that the graph in undirected, otherwise the
+Also this figure shows that the graph is undirected, otherwise the
 edge would have one or two arrow heads. The vertices display the node
 index, which is the default behavior.
 
@@ -1085,8 +1085,8 @@ This is an extension of the previous chapter
 
 \subsubsection{Graph}
 
-To create a fully connected undirected graph with two vertices (also
-called $K_{2}$), one needs two vertices and one (undirected) edge,
+To create a fully connected undirected graph with three vertices (also
+called $K_{3}$), one needs three vertices and three (undirected) edges,
 as depicted in figure \ref{fig:create_k3_graph}.
 
 \begin{figure}[H]
@@ -1120,7 +1120,7 @@ To create $K_{3}$, the following code can be used:
 
 \subsubsection{Creating such a graph}
 
-Algorithm \ref{alg:create_k3_graph_demo} demonstrates how to 'create\_k2\_graph'
+Algorithm \ref{alg:create_k3_graph_demo} demonstrates how to 'create\_k3\_graph'
 and checks if it has the correct amount of edges and vertices:
 
 \begin{algorithm}[H]
@@ -1204,7 +1204,7 @@ To create a path graph, the following code can be used:
 
 \subsubsection{Creating such a graph}
 
-Algorithm \ref{alg:create_path_graph_demo} demonstrates how to 'create\_k2\_graph'
+Algorithm \ref{alg:create_path_graph_demo} demonstrates how to 'create\_path\_graph'
 and checks if it has the correct amount of edges and vertices:
 
 \begin{algorithm}[H]
@@ -1244,7 +1244,7 @@ to .svg using algorithm \ref{alg:convert_dot_to_svg}\label{fig:create_path_graph
 
 
 
-\subsection{\textifsymbol[ifgeo]{100} Creating a Peterson graph\label{sub:create_petersen_graph}\index{Create Petersen graph}\index{Petersen graph, create}}
+\subsection{\textifsymbol[ifgeo]{100} Creating a Petersen graph\label{sub:create_petersen_graph}\index{Create Petersen graph}\index{Petersen graph, create}}
 
 This is an extension of the previous chapter.
 
@@ -1285,7 +1285,7 @@ of edges and vertices:
 \begin{algorithm}[H]
 \lstinputlisting[breaklines=true,language={C++}]{create_petersen_graph_demo.impl}
 
-\caption{Demonstration of 'create\_k3\_graph' \label{alg:create_petersen_graph_demo}}
+\caption{Demonstration of 'create\_petersen\_graph' \label{alg:create_petersen_graph_demo}}
 \end{algorithm}
 
 
@@ -1325,7 +1325,7 @@ Now that we can build a graph, there are some things we can do.
 \begin{itemize}
 \item Getting the vertices' out degrees: see chapter \ref{sub:get_vertex_out_degrees}
 \item Create a direct-neighbour subgraph from a vertex descriptor
-\item Create all direct-neighbour subgraphs from a graphs
+\item Create all direct-neighbour subgraphs from a graph
 \item Saving a graph without properties to .dot file: see chapter \ref{sub:save_graph_to_dot}
 \item Loading an undirected graph without properties from .dot file: see
 chapter \ref{sub:load_undirected_graph_from_dot}
@@ -1626,7 +1626,7 @@ graph.
 \section{Building graphs with named vertices\label{sec:Building-graphs-with-named-vertices}}
 
 Up until now, the graphs created have had edges and vertices without
-any propery. In this chapter, graphs will be created, in which the
+any property. In this chapter, graphs will be created, in which the
 vertices can have a name. This name will be of the std::string data
 type, but other types are possible as well. There are many more built-in
 properties edges and nodes can have (see chapter \ref{sub:all_properties}
@@ -1682,7 +1682,7 @@ This graph:
 \item is directed (due to the boost::directedS\index{boost::directedS})
 \item The vertices have one property: they have a name, which is of data
 type std::string (due to the boost::property<boost::vertex\_name\_t,
-std::string>\index{boost::property}\index{boost::vertex_name_t@boost::vertex\_name\_t}')
+std::string>\index{boost::property}\index{boost::vertex_name_t@boost::vertex\_name\_t})
 \item Edges and graph have no properties
 \item Edges are stored in a std::list
 \end{itemize}
@@ -2636,7 +2636,7 @@ algorithm \ref{alg:get_vertex_names}).
 \section{Building graphs with named edges and vertices\label{sec:Building-graphs-with-named-edges-and-vertices}}
 
 Up until now, the graphs created have had edges and vertices without
-any propery. In this chapter, graphs will be created, in which edges
+any property. In this chapter, graphs will be created, in which edges
 vertices can have a name. This name will be of the std::string data
 type, but other types are possible as well. There are many more built-in
 properties edges and nodes can have (see the boost/graph/properties.hpp
@@ -3219,7 +3219,7 @@ and the 'get\_vertex\_names' function, algorithm \ref{alg:get_vertex_names}).
 \section{Building graphs with bundled vertices\label{sec:Building-graphs-with-bundled-vertices}}
 
 Up until now, the graphs created have had edges and vertices with
-the built-in name propery. In this chapter, graphs will be created,
+the built-in name property. In this chapter, graphs will be created,
 in which the vertices can have a bundled 'my\_bundled\_vertex' type%
 \footnote{I do not intend to be original in naming my data types%
 }. The following graphs will be created:
@@ -5453,7 +5453,7 @@ to exist.
 \section{Building graphs with custom edges and vertices}
 
 Up until now, the graphs created have had edges and vertices with
-the built-in name propery. In this chapter, graphs will be created,
+the built-in name property. In this chapter, graphs will be created,
 in which the edges and vertices can have a custom 'my\_custom\_edge'
 and 'my\_custom\_edge' type%
 \footnote{I do not intend to be original in naming my data types%
@@ -6815,7 +6815,7 @@ LIBS += -lboost_graph -lboost_regex
 
 
 
-\subsection{Property not found: node\_id\label{sub:property_not_found_node_id}\index{node_id@node\_id}\index{Propery not found}\index{Property not found: node_id@Property not found: node\_id}}
+\subsection{Property not found: node\_id\label{sub:property_not_found_node_id}\index{node_id@node\_id}\index{Property not found}\index{Property not found: node_id@Property not found: node\_id}}
 
 When loading a graph from file (as in chapter \ref{sub:load_undirected_graph_from_dot})
 you will be using boost::read\_graphviz\index{boost::read_graphviz@boost::read\_graphviz}.
